@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Clinic - Healthcare Reimagined</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <img src="/api/placeholder/120/40" alt="Clinic Logo" class="logo">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="menu-toggle">Menu</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div>
+                        <h1>Healthcare for the Modern Age</h1>
+                        <p>Experience personalized care with cutting-edge medical technology and compassionate professionals.</p>
+                        <a href="contact.html" class="btn btn-primary mt-2">Book Appointment</a>
+                    </div>
+                    <img src="/api/placeholder/600/400" alt="Modern Clinic Interior" class="hero-image">
+                </div>
+            </div>
+        </section>
+
+        <section class="about">
+            <div class="container">
+                <div class="about-grid">
+                    <img src="/api/placeholder/600/400" alt="Doctor and Patient" class="about-image">
+                    <div>
+                        <h2>About Our Clinic</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                        <a href="about.html" class="btn btn-secondary mt-2">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="articles">
+            <div class="container">
+                <h2 class="text-center mb-2">Latest Health Insights</h2>
+                <div class="article-grid">
+                    <article class="article-card">
+                        <img src="/api/placeholder/400/200" alt="Health Article 1" class="article-image">
+                        <div class="article-content">
+                            <h3>Understanding Preventive Care</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
+                            <a href="#" class="btn btn-primary mt-2">Read More</a>
+                        </div>
+                    </article>
+                    <article class="article-card">
+                        <img src="/api/placeholder/400/200" alt="Health Article 2" class="article-image">
+                        <div class="article-content">
+                            <h3>Wellness Tips for Modern Life</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
+                            <a href="#" class="btn btn-primary mt-2">Read More</a>
+                        </div>
+                    </article>
+                    <article class="article-card">
+                        <img src="/api/placeholder/400/200" alt="Health Article 3" class="article-image">
+                        <div class="article-content">
+                            <h3>Latest Medical Technologies</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
+                            <a href="#" class="btn btn-primary mt-2">Read More</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <img src="/api/placeholder/120/40" alt="Clinic Logo" class="logo">
+                    <p>Modern healthcare solutions for a better tomorrow.</p>
+                </div>
+                <div>
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="refund.html">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li>123 Medical Drive</li>
+                        <li>City, State 12345</li>
+                        <li>Phone: (555) 123-4567</li>
+                        <li>Email: info@modernclinic.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Basic mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        menuToggle.addEventListener('click', () => {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+    </script>
+</body>
+</html>
