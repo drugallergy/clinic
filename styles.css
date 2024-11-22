@@ -33,7 +33,7 @@ body {
   padding: 0 20px;
 }
 
-/* Updated Header and Navigation Styles */
+/* Navigation Base Styles */
 .header {
   position: fixed;
   top: 0;
@@ -52,6 +52,7 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 100%;
+  position: relative;
 }
 
 .logo {
@@ -59,10 +60,13 @@ body {
   z-index: 1001;
 }
 
+/* Desktop Navigation */
 .nav-links {
   display: flex;
   gap: 2rem;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links a {
@@ -76,7 +80,7 @@ body {
   color: var(--accent-orange);
 }
 
-/* Hamburger Menu Styles */
+/* Hamburger Menu */
 .hamburger {
   display: none;
   cursor: pointer;
@@ -95,7 +99,7 @@ body {
   transition: var(--transition);
 }
 
-/* Mobile Navigation Styles */
+/* Mobile Navigation */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -115,14 +119,44 @@ body {
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    transition: var(--transition);
+    transition: 0.3s ease-in-out;
     padding: 2rem;
+    z-index: 1000;
   }
 
+  /* This is the key fix - properly show nav when active */
   .nav-links.active {
     right: 0;
+    display: flex;
   }
 
+  .nav-links li {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-links.active li {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* Stagger the animation for each nav item */
+  .nav-links li:nth-child(1) { transition-delay: 0.1s; }
+  .nav-links li:nth-child(2) { transition-delay: 0.2s; }
+  .nav-links li:nth-child(3) { transition-delay: 0.3s; }
+  .nav-links li:nth-child(4) { transition-delay: 0.4s; }
+  .nav-links li:nth-child(5) { transition-delay: 0.5s; }
+
+  .nav-links a {
+    display: block;
+    font-size: 1.2rem;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Overlay styles */
   .nav-overlay {
     position: fixed;
     top: 0;
@@ -132,7 +166,8 @@ body {
     background: rgba(0, 0, 0, 0.5);
     opacity: 0;
     visibility: hidden;
-    transition: var(--transition);
+    transition: 0.3s ease-in-out;
+    z-index: 999;
   }
 
   .nav-overlay.active {
